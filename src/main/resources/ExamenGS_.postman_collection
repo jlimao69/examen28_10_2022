@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "537e6df7-cc96-4c3e-8d1c-feb112a389c2",
+		"name": "ExamenGS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "InsertaEmpleado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"genderId\": 1,\r\n    \"jobId\": 1,\r\n    \"name\": \"ANTONIA\",\r\n    \"lastName\": \"LIMA\",\r\n    \"birthdate\": \"1983-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/v1/newEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"v1",
+						"newEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultathread",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeeId\": [1,2,4],\r\n    \"startDate\": \"01/01/1990\",\r\n    \"endDate\": \"31/12/2022\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/v1/jobsEmployThread",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"v1",
+						"jobsEmployThread"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/employee/v1/jobsEmploy/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"v1",
+						"jobsEmploy",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "employById",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employee/v1/jobsEmploy/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employee",
+								"v1",
+								"jobsEmploy",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Oct 2022 00:00:40 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"employeeId\": 6,\n        \"name\": \"ANTONIO\",\n        \"lastName\": \"LIMA\",\n        \"birthdate\": \"1992-09-30T06:00:00.000+00:00\",\n        \"genders\": {\n            \"gendersId\": 1,\n            \"name\": \"MASCULINO\"\n        },\n        \"jobs\": {\n            \"jobsId\": 1,\n            \"name\": \"DIRECTOR\",\n            \"salary\": 99000\n        }\n    },\n    {\n        \"employeeId\": 7,\n        \"name\": \"FRANCISCA\",\n        \"lastName\": \"LIMA\",\n        \"birthdate\": \"1992-03-31T06:00:00.000+00:00\",\n        \"genders\": {\n            \"gendersId\": 1,\n            \"name\": \"MASCULINO\"\n        },\n        \"jobs\": {\n            \"jobsId\": 1,\n            \"name\": \"DIRECTOR\",\n            \"salary\": 99000\n        }\n    },\n    {\n        \"employeeId\": 1,\n        \"name\": \"JUAN\",\n        \"lastName\": \"LOPEZ\",\n        \"birthdate\": \"1992-02-20T06:00:00.000+00:00\",\n        \"genders\": {\n            \"gendersId\": 1,\n            \"name\": \"MASCULINO\"\n        },\n        \"jobs\": {\n            \"jobsId\": 1,\n            \"name\": \"DIRECTOR\",\n            \"salary\": 99000\n        }\n    },\n    {\n        \"employeeId\": 4,\n        \"name\": \"PABLO\",\n        \"lastName\": \"PEREZ\",\n        \"birthdate\": \"1970-12-13T06:00:00.000+00:00\",\n        \"genders\": {\n            \"gendersId\": 1,\n            \"name\": \"MASCULINO\"\n        },\n        \"jobs\": {\n            \"jobsId\": 1,\n            \"name\": \"DIRECTOR\",\n            \"salary\": 99000\n        }\n    }\n]"
+				}
+			]
+		}
+	]
+}
